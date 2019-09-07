@@ -1,9 +1,9 @@
-const generateRowData = require('../data/form-data')
+const generateFormData = require('../data/form-data')
 const dims = require('../constants/dimensions')
 
 module.exports = (doc) => {
 
-    const rows = generateRowData()
+    const rows = generateFormData()
     const spacing = 40
     const top = dims.top + 100
     const left = dims.left
@@ -17,7 +17,7 @@ module.exports = (doc) => {
             .text(rows[i].key + ':', left + 10, top + spacing * i - 20)
 
         doc
-            .text(rows[i].value, left + 100, top + spacing * i - 20)
+            .text(rows[i].value, left + 85, top + spacing * i - 20)
 
         doc
             .moveTo(left, top + spacing * i)

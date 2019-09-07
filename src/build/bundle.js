@@ -135184,15 +135184,15 @@ const docHeight = 792
 module.exports = {
     width: docWidth - padding * 2,
     height: docHeight - padding * 2,
-    leftX: padding,
-    rightX: docWidth - padding,
-    topY: padding,
-    bottomY: docHeight - padding
+    left: padding,
+    right: docWidth - padding,
+    top: padding,
+    bottom: docHeight - padding
 }
 },{}],1338:[function(require,module,exports){
 const faker = require('faker')
 
-generateRowData = () => {
+generateFormData = () => {
 
     const firstName = faker.name.firstName()
     const lastName = faker.name.lastName()
@@ -135237,7 +135237,7 @@ generateRowData = () => {
 
 }
 
-module.exports = generateRowData
+module.exports = generateFormData
 },{"faker":218}],1339:[function(require,module,exports){
 const faker = require('faker')
 
@@ -135292,15 +135292,15 @@ const generateTableData = () => {
 
 module.exports = generateTableData
 },{"faker":218}],1340:[function(require,module,exports){
-const generateRowData = require('../data/form-data')
+const generateFormData = require('../data/form-data')
 const dims = require('../constants/dimensions')
 
 module.exports = (doc) => {
 
-    const rows = generateRowData()
+    const rows = generateFormData()
     const spacing = 40
-    const top = dims.topY + 100
-    const left = dims.leftX
+    const top = dims.top + 100
+    const left = dims.left
 
     for (let i = 0; i < rows.length; i++) {
 
@@ -135311,11 +135311,11 @@ module.exports = (doc) => {
             .text(rows[i].key + ':', left + 10, top + spacing * i - 20)
 
         doc
-            .text(rows[i].value, left + 100, top + spacing * i - 20)
+            .text(rows[i].value, left + 85, top + spacing * i - 20)
 
         doc
             .moveTo(left, top + spacing * i)
-            .lineTo(dims.rightX, top + spacing * i)
+            .lineTo(dims.right, top + spacing * i)
             .stroke();
     }
 
@@ -135327,7 +135327,7 @@ module.exports = (doc) => {
 
     doc.save()
         .fontSize(20)
-        .text('Example PDF', dims.topY, dims.leftX)
+        .text('Example PDF', dims.top, dims.left)
 
 }
 
@@ -135338,8 +135338,8 @@ const dims = require('../constants/dimensions')
 module.exports = (doc) => {
 
     const columns = generateTableData()
-    const top = dims.topY + 400
-    const left = dims.leftX
+    const top = dims.top + 400
+    const left = dims.left
     const height = 40
     let totalWidth = 0
 
@@ -135373,14 +135373,14 @@ const faker = require('faker')
 const dims = require('../constants/dimensions')
 
 let heading = faker.lorem.words(2)
-const text = faker.lorem.paragraphs(8)
+const text = faker.lorem.paragraphs(8, '\n\n')
 heading = heading.charAt(0).toUpperCase() + heading.slice(1)
 
 module.exports = (doc) => {
 
     doc.save()
         .fontSize(16)
-        .text(heading, dims.topY, dims.leftX)
+        .text(heading, dims.top, dims.left)
         .moveDown()
         .fontSize(12)
         .text(text)

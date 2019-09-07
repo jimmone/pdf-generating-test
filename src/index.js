@@ -4,7 +4,7 @@ const uuid = require('uuid')
 const PDFDocument = require('pdfkit')
 
 let docCount = process.argv[2] || 1
-const maxDocCount = 1000
+const maxDocCount = 10000
 
 if (docCount > maxDocCount) {
     docCount = maxDocCount

@@ -1,6 +1,6 @@
 const faker = require('faker')
 
-generateRowData = () => {
+generateFormData = () => {
 
     const firstName = faker.name.firstName()
     const lastName = faker.name.lastName()
@@ -45,4 +45,4 @@ generateRowData = () => {
 
 }
 
-module.exports = generateRowData
+module.exports = generateFormData
