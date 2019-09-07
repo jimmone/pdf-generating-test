@@ -4,6 +4,6 @@ module.exports = (doc) => {
 
     doc.save()
         .fontSize(20)
-        .text('Example PDF', dims.topY, dims.leftX)
+        .text('Example PDF', dims.top, dims.left)
 
 }

@@ -5,8 +5,8 @@ module.exports = (doc) => {
 
     const rows = generateRowData()
     const spacing = 40
-    const top = dims.topY + 100
-    const left = dims.leftX
+    const top = dims.top + 100
+    const left = dims.left
 
     for (let i = 0; i < rows.length; i++) {
 
@@ -21,7 +21,7 @@ module.exports = (doc) => {
 
         doc
             .moveTo(left, top + spacing * i)
-            .lineTo(dims.rightX, top + spacing * i)
+            .lineTo(dims.right, top + spacing * i)
             .stroke();
     }
 

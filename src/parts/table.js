@@ -4,8 +4,8 @@ const dims = require('../constants/dimensions')
 module.exports = (doc) => {
 
     const columns = generateTableData()
-    const top = dims.topY + 400
-    const left = dims.leftX
+    const top = dims.top + 400
+    const left = dims.left
     const height = 40
     let totalWidth = 0
 
