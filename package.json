@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init": "mkdir documents && mkdir src/build",
     "dev": "watchify dev.js -o src/build/bundle.js",
     "start": "node src/index",
     "clean": "rm -rf documents && mkdir documents"
