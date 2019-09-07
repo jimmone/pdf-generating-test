@@ -1,0 +1,22 @@
+{
+  "name": "pdf-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "watchify dev.js -o src/build/bundle.js",
+    "start": "node src/index",
+    "clean": "rm -rf documents && mkdir documents"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blob-stream": "^0.1.3",
+    "brfs": "^2.0.2",
+    "faker": "^4.1.0",
+    "pdfkit": "^0.10.0",
+    "uuid": "^3.3.3",
+    "watchify": "^3.11.1"
+  }
+}
