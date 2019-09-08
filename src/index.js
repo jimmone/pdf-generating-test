@@ -2,9 +2,12 @@ const fs = require('fs');
 const app = require('./app')
 const uuid = require('uuid')
 const PDFDocument = require('pdfkit')
+const CliProgress = require('cli-progress');
+
+const progressBar = new CliProgress.SingleBar({}, CliProgress.Presets.shades_classic);
 
 let docCount = process.argv[2] || 1
-const maxDocCount = 10000
+const maxDocCount = 1000
 
 if (docCount > maxDocCount) {
     docCount = maxDocCount
@@ -12,6 +15,7 @@ if (docCount > maxDocCount) {
 }
 
 console.log('Creating PDF documents...')
+progressBar.start(docCount, 0)
 
 for (let i = 0; i < docCount; i++) {
 
@@ -23,6 +27,9 @@ for (let i = 0; i < docCount; i++) {
 
     doc.end()
 
+    progressBar.update(i + 1)
+
 }
 
+progressBar.stop()
 console.log('Documents created')
