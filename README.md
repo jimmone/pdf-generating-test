@@ -9,5 +9,4 @@
 `npm run clean` to delete the PDF files.
 
 ### Here is an example PDF
-![PDF 1](example-page-001.jpg)
-![PDF 2](example-page-002.jpg)
+![PDF](example-pdf.png)
