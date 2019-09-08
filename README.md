@@ -9,4 +9,4 @@
 `npm run clean` to delete the PDF files.
 
 ### Here is an example PDF
-![Alt text](/example.pdf?raw=true "Optional Title")
+[embed]example.pdf[/embed]
