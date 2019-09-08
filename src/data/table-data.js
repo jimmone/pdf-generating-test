@@ -16,7 +16,7 @@ const generateTableData = () => {
         {
             header: "Price",
             value: () => faker.random.number({ min: 1, max: 1000 }),
-            width: .14,
+            width: .12,
         },
         {
             header: "Total",

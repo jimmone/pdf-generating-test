@@ -135257,7 +135257,7 @@ const generateTableData = () => {
         {
             header: "Price",
             value: () => faker.random.number({ min: 1, max: 1000 }),
-            width: .14,
+            width: .12,
         },
         {
             header: "Total",
@@ -135368,6 +135368,7 @@ module.exports = (doc) => {
     }
 
 }
+
 },{"../constants/dimensions":1337,"../data/table-data":1339}],1343:[function(require,module,exports){
 const faker = require('faker')
 const dims = require('../constants/dimensions')

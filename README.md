@@ -7,3 +7,6 @@
 `npm start <amount>` to generate PDF files. Default value for amount is 1 and it is limited to 1000. You can change these from index.js
 
 `npm run clean` to delete the PDF files.
+
+### Here is an example PDF
+![Alt text](/example.pdf?raw=true "Optional Title")
